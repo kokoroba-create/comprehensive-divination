@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>総合鑑定 - チャネリング × 占星術 × エネルギーワーク</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .header-subtext {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 30px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #2c3e50;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #f39c12;
+      padding-bottom: 15px;
+    }
+
+    section h3 {
+      color: #2c3e50;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    section h4 {
+      color: #2c3e50;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    section p {
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    /* ===== 定義セクション ===== */
+    .definition-box {
+      background: #f9f9f9;
+      border-left: 4px solid #f39c12;
+      padding: 25px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    .definition-box p {
+      margin-bottom: 10px;
+    }
+
+    /* ===== 比較表 ===== */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      background: white;
+      border: 1px solid #ddd;
+    }
+
+    .comparison-table th {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .comparison-table td {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: left;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    /* ===== セッション流れ ===== */
+    .process-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .process-card {
+      flex: 1;
+      min-width: 200px;
+      background: white;
+      border: 2px solid #f39c12;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .process-card h4 {
+      color: #f39c12;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .process-card p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-item {
+      background: #f9f9f9;
+      border-left: 4px solid #2196F3;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .faq-item strong {
+      color: #2c3e50;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      color: #666;
+      margin: 0;
+    }
+
+    /* ===== クライアントの声 ===== */
+    .testimonial-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-left: 4px solid #f39c12;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+
+    .testimonial-name {
+      text-align: right;
+      color: #999;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* ===== 次のステップ ===== */
+    .next-steps {
+      background: #e3f2fd;
+      border-left: 4px solid #2196F3;
+      padding: 25px;
+      border-radius: 5px;
+    }
+
+    .next-step-item {
+      margin-bottom: 30px;
+    }
+
+    .next-step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .next-step-item h4 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+
+    .next-step-link {
+      color: #f39c12;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .next-step-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== CTA セクション ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin: 60px auto;
+      max-width: 100%;
+    }
+
+    .cta-section h2 {
+      color: rgba(255, 255, 255, 0.9);
+      border-bottom: none;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background: #f39c12;
+      color: white;
+      padding: 20px 50px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #e67e22;
+    }
+
+    /* ===== フッター ===== */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      color: white;
+      margin: 0;
+    }
+
+    /* ===== レスポンシブ ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      .process-container {
+        flex-direction: column;
+      }
+
+      .comparison-table {
+        font-size: 0.9rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== ヘッダー ===== -->
+<header>
+  <h1>🌙 総合鑑定</h1>
+  <p>あなたの人生全体を多角的に分析する</p>
+  <div class="header-subtext">
+    <p><strong>60分 ¥55,000（税込）</strong> / <strong>90分 ¥77,000（税込）</strong></p>
+  </div>
+</header>
+
+<!-- ===== 総合鑑定とは ===== -->
+<section>
+  <h2>総合鑑定とは</h2>
+  <div class="definition-box">
+    <h4>チャネリング × 西洋占星術 × インド占星術 × 四柱推命</h4>
+    <p>総合鑑定は、<strong>チャネリングをメイン</strong>としながら、占星術などを補佐的に活用し、あなたの人生全体を多角的に分析する深い鑑定です。</p>
+    <p><strong>メイン：チャネリング</strong>（ハイヤーセルフからのメッセージ）</p>
+    <p><strong>補佐：占星術など</strong>（西洋占星術、インド占星術、四柱推命でチャネリング結果を確認・強化）</p>
+  </div>
+
+  <h3>こんなことがわかります</h3>
+  <ul style="margin-left: 20px; color: #666;">
+    <li style="margin-bottom: 10px;">あなたの才能・適職・人生の使命</li>
+    <li style="margin-bottom: 10px;">人間関係のパターンと改善方法</li>
+    <li style="margin-bottom: 10px;">人生全体の流れとタイムライン</li>
+    <li style="margin-bottom: 10px;">過去世のテーマと今世の課題</li>
+    <li style="margin-bottom: 10px;">未来の道筋と具体的な行動ステップ</li>
+    <li style="margin-bottom: 10px;">ハイヤーセルフからのメッセージ</li>
+  </ul>
+</section>
+
+<!-- ===== チャネリング鑑定との違い ===== -->
+<section>
+  <h2>チャネリング鑑定との違い</h2>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>チャネリング鑑定</th>
+        <th>総合鑑定</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>時間</strong></td>
+        <td>45分</td>
+        <td>60分 / 90分</td>
+      </tr>
+      <tr>
+        <td><strong>料金</strong></td>
+        <td>¥16,500</td>
+        <td>¥55,000 / ¥77,000</td>
+      </tr>
+      <tr>
+        <td><strong>方法</strong></td>
+        <td>チャネリングのみ</td>
+        <td>チャネリング + 占術</td>
+      </tr>
+      <tr>
+        <td><strong>分析の深さ</strong></td>
+        <td>シンプル・入門向け</td>
+        <td>深掘り・総合的</td>
+      </tr>
+      <tr>
+        <td><strong>メッセージ量</strong></td>
+        <td>標準的</td>
+        <td>充実・詳しい</td>
+      </tr>
+      <tr>
+        <td><strong>向き</strong></td>
+        <td>気軽に試したい</td>
+        <td>人生全体を知りたい</td>
+      </tr>
+      <tr>
+        <td><strong>60分 vs 90分</strong></td>
+        <td>—</td>
+        <td>60分：標準的な深掘り / 90分：詳しい深掘り + 充実したアドバイス</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== セッションの流れ ===== -->
+<section>
+  <h2>セッションの流れ</h2>
+  <div class="process-container">
+    <div class="process-card">
+      <h4>STEP 1</h4>
+      <p>事前ヒアリング</p>
+    </div>
+    <div class="process-card">
+      <h4>STEP 2</h4>
+      <p>チャネリング</p>
+    </div>
+    <div class="process-card">
+      <h4>STEP 3</h4>
+      <p>占術による確認・補強</p>
+    </div>
+    <div class="process-card">
+      <h4>STEP 4</h4>
+      <p>フィードバック＆質問対応</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== よくある質問 ===== -->
+<section>
+  <h2>よくある質問</h2>
+  <div class="faq-item">
+    <strong>Q: 占星術の知識がなくても大丈夫ですか？</strong>
+    <p>はい、大丈夫です。むずかしい専門用語は避け、わかりやすくお伝えします。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q: 60分と90分の違いは何ですか？</strong>
+    <p>内容は同じですが、90分はより深掘りできる時間を確保でき、メッセージも充実、具体的な行動ステップまで詳しくお伝えできます。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q: セッションはオンラインですか？</strong>
+    <p>はい、Zoom での個別オンラインです。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q: セッション後、記録は残りますか？</strong>
+    <p>ご希望の方には、セッション後に内容のまとめをお送りします（別途相談）。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q: 次は何を受ければいいのか、わかりません。</strong>
+    <p>セッション時にあなたの段階に合わせた次のステップをご提案します。無料個別相談会でもご相談いただけます。</p>
+  </div>
+</section>
+
+<!-- ===== クライアントの声 ===== -->
+<section>
+  <h2>クライアントの声</h2>
+  <div class="testimonial-card">
+    <p class="testimonial-text">「自分の人生の流れが一気に理解できました。占星術とチャネリングの組み合わせで、これまでの疑問がスッキリ解けて、これからの方向性が明確になりました。」</p>
+    <p class="testimonial-name">— D さん</p>
+  </div>
+  <div class="testimonial-card">
+    <p class="testimonial-text">「過去世の話から現在、そして未来まで、トータルで見てもらえるので納得感が高い。具体的なアドバイスも得られたので、すぐに実践できます。」</p>
+    <p class="testimonial-name">— E さん</p>
+  </div>
+  <div class="testimonial-card">
+    <p class="testimonial-text">「チャネリング鑑定から進化した総合鑑定。一度受けると、人生の見え方が変わります。90分で深掘りしてもらって、本当に良かった。」</p>
+    <p class="testimonial-name">— F さん</p>
+  </div>
+</section>
+
+<!-- ===== 次のステップ ===== -->
+<section>
+  <div class="next-steps">
+    <h3 style="color: #2c3e50; margin-top: 0;">あなたの段階に応じた、次のステップ</h3>
+
+    <div class="next-step-item">
+      <h4>📌 覚醒ワークφアマテルをまだ受講していない方</h4>
+      <p>「もっと自分のことを知りたい」</p>
+      <p>「自分で自分のことを理解し、前進したい。本当の自分に還る方法を学びたい」</p>
+      <p style="margin-top: 15px;"><strong>その想いを叶えるために、まずは覚醒ワークφアマテルでスピリチュアル基礎を確立しましょう。</strong></p>
+      <a href="https://kokoroba-create.github.io/amateru/" class="next-step-link">▶ 覚醒ワークφアマテルを見る</a>
+    </div>
+
+    <div class="next-step-item">
+      <h4>🔥 覚醒ワークφアマテルを受講済みの方</h4>
+      <p>総合鑑定で得た洞察をベースに、実行力を磨き「本当に変わった自分」へ。</p>
+      <p style="margin-top: 15px;"><strong>次のステップ：能力覚醒ブートキャンプを受講</strong></p>
+      <a href="https://kokoroba-create.github.io/bootcamp/" class="next-step-link">▶ ブートキャンプ LP を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <h2>あなたの人生全体の答えを<br>多角的に見つけませんか？</h2>
+  <p style="margin-bottom: 30px;">チャネリング × 占星術で、才能・使命・人生の流れが一気にクリアになります。</p>
+  <p style="margin-bottom: 30px; color: rgba(255, 255, 255, 0.9);">まずは無料個別相談会で、あなたに最適なプランをご確認ください。</p>
+  <a href="https://lit.link/Kakuei_reina" class="cta-button">無料個別相談会に申し込む</a>
+</section>
+
+<!-- ===== フッター ===== -->
+<footer>
+  <p>&copy; 2026 総合鑑定 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
